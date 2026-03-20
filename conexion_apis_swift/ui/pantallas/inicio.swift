@@ -12,7 +12,7 @@ struct Inicio: View {
     @Environment(ControladorGeneral.self) var controlador
     
     var body: some View {
-        Text("Hola mundo")
+        Text("Mes en yer")
         NavigationStack{
             switch(controlador.estado){
                 case .descargando_publicaciones:

@@ -32,7 +32,7 @@ struct PantallaPublicacion: View {
             }
         }
         else{
-            Text("\(controlador.estado)")
+            //Text("\(controlador.estado)")
             
             Text("Publicacion \(controlador.publicacion?.title ?? "")")
             
