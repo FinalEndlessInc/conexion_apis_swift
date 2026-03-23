@@ -26,22 +26,24 @@ struct Inicio: View {
                             } label: {
                                 Text(publicacion.title)
                             }
-                            .simultaneousGesture(TapGesture().onEnded{
+                            /*/.simultaneousGesture(TapGesture().onEnded{
                                 controlador.descargar_publicacion(id: publicacion.id)
-                            })
+                            })*/
                         }
                     }
                 
                 case .descargando_publicacion:
-                Text("")
+                Image(systemName: "arrowshape.down.circle")
+                    .symbolEffect(.pulse)
                     
                 case .error_en_descarga:
                     Text("ERROR: Asegurate de tener wifi RAHH!!!")
             }
-            
+        }
+        .onAppear{
+            controlador.descargar_publicaciones()
         }
     }
-        
 }
 
 #Preview {

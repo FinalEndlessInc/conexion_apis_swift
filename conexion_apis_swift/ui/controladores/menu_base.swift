@@ -12,15 +12,15 @@ struct MenuBase: View {
     
     var body: some View {
         TabView{
-            Tab("Publicaciones", systemImage: "tray.and.arrow.down.fill"){
+            Tab("Publicaciones", systemImage: "square.and.pencil"){
                 Inicio()
             }.badge(2)
             
-            Tab("Perfil", systemImage: "tray.and.arrow.up.fill"){
+            Tab("Perfil", systemImage: "person.crop.circle"){
                 Text("Deberia hacer una pantalla de perfil")
             }
             
-            Tab("Congiguracion", systemImage: "person.crop.circle.fill"){
+            Tab("Congiguracion", systemImage: "gearshape"){
                 Text("Tambien una configuracion")
             }
             .badge("!")
