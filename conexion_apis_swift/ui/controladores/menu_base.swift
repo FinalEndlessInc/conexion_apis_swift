@@ -17,7 +17,7 @@ struct MenuBase: View {
             }.badge(2)
             
             Tab("Perfil", systemImage: "person.crop.circle"){
-                Text("Deberia hacer una pantalla de perfil")
+                PantallaUsuario(id:7)
             }
             
             Tab("Congiguracion", systemImage: "gearshape"){
