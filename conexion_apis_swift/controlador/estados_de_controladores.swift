@@ -11,3 +11,16 @@ enum EstadosControladorGeneral{
     case descargando_publicacion
     case error_en_descarga
 }
+
+enum EstadosUsuario{
+    case decargando
+    case error_en_la_descarga
+    case espera
+}
+
+enum EstadosConfiguracion{
+    case descargando_datos
+    case esperando_edicion
+    case espera
+    case error_de_configuracion
+}

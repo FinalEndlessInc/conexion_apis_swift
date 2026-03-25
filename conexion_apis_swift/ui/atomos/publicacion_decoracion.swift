@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PublicacionDecorada :View {
-    //var publicacion: Publicacion
+    var publicacion: Publicacion
+    
     
     var body: some View {
             VStack{
@@ -18,12 +19,13 @@ struct PublicacionDecorada :View {
                     VStack(alignment: .leading){
                         HStack{
                             //Nombre del usuario que lo publico
-                            Text("Aquí debería ir el usuario")
+                            
+                            Text("\(publicacion.title)")
                                 .bold()
                         }
                         VStack{
                             //Publicacion
-                            Text("Aquí va todo el rollo del texto")
+                            Text("\(publicacion.body)")
                         }
                     }
                     Spacer()
@@ -34,10 +36,7 @@ struct PublicacionDecorada :View {
             }
             .padding()
             //.frame(height: 150)
-            .background(Color("color_principal"))
+            .background(Color.white)
     }
 }
 
-#Preview {
-    PublicacionDecorada()
-}

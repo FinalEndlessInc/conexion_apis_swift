@@ -24,7 +24,8 @@ struct Inicio: View {
                             NavigationLink{
                                 PantallaPublicacion(id: publicacion.id)
                             } label: {
-                                Text(publicacion.title)
+                                // Text(publicacion.title)
+                                PublicacionDecorada(publicacion: publicacion)
                             }
                             /*/.simultaneousGesture(TapGesture().onEnded{
                                 controlador.descargar_publicacion(id: publicacion.id)
