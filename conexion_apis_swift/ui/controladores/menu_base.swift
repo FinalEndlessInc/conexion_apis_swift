@@ -14,14 +14,14 @@ struct MenuBase: View {
         TabView{
             Tab("Publicaciones", systemImage: "square.and.pencil"){
                 Inicio()
-            }.badge(2)
+            }.badge("!")
             
             Tab("Perfil", systemImage: "person.crop.circle"){
                 PantallaUsuario(id:7)
             }
             
             Tab("Congiguracion", systemImage: "gearshape"){
-                Text("Tambien una configuracion")
+                PantallaConfiguracion(id: 7)
             }
             .badge("!")
         }

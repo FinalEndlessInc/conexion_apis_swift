@@ -21,7 +21,7 @@ struct PantallaPublicacion: View {
                 
             case .en_espera:
                 if let publicacion = controlador.publicacion{
-                    VistaPublicacion(publicacion: publicacion)
+                    VerPublicacion(publicacion: publicacion)
                 }else{
                     Text("Error en la descarga")
                 }

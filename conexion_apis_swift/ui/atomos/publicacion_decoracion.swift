@@ -20,12 +20,16 @@ struct PublicacionDecorada :View {
                         HStack{
                             //Nombre del usuario que lo publico
                             
-                            Text("\(publicacion.title)")
+                            Text("\(publicacion.usuario?.name ?? "Anonimo")")
                                 .bold()
+                                .multilineTextAlignment(.leading)
+                                .foregroundStyle(Color.black)
                         }
                         VStack{
                             //Publicacion
                             Text("\(publicacion.body)")
+                                .multilineTextAlignment(.leading)
+                                .foregroundStyle(Color.black)
                         }
                     }
                     Spacer()

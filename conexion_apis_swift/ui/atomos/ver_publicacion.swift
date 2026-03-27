@@ -8,27 +8,33 @@
 import SwiftUI
 
 struct VerPublicacion: View {
+    var publicacion: Publicacion
+    
     var body: some View {
         VStack{
             HStack{
                 SinFotoDePerfil(tamaño: 60)
-                Text("Wenas")
+                Text("\(publicacion.usuario?.name ?? "Anonimo")")
                 Spacer()
                 Image(systemName: "ellipsis")
             }.padding(-5)
             
             HStack{
-                Text("mucho Texto asi asi, mucho texto, no mpuede ser se esta llenando esta xingadera")
+                Text("\(publicacion.title)")
+            }
+            
+            HStack{
+                Text("\(publicacion.body)")
             }.padding()
             
             AccionesPublicacion()
             
         }
         .padding()
-        .background(Color("color_principal"))
+        
+        
+        
     }
 }
 
-#Preview {
-    VerPublicacion()
-}
+

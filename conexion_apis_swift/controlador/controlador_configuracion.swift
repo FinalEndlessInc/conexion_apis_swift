@@ -15,7 +15,6 @@ class ControladorConfiguracion{
     
     init(){
         estado = .espera
-    
     }
     
     func obtener_datos_del_usuario(id: Int){
@@ -28,12 +27,13 @@ class ControladorConfiguracion{
         }
     }
     
+    
     private func _obtener_datos_del_usuario(id: Int) async{
         let url_usuario: String = "\(url_base)/users/\(id)"
         
         if let usuario_descargado: Usuario = await ServicioAPI.descargar_informacion(desde: url_usuario){
             usuario = usuario_descargado
-            estado = .esperando_edicion
+            estado = .espera
             
         }else{ // Si recibimos un nil entonces algo salio mal y debo poner una pantalla de error
             estado = .error_de_configuracion

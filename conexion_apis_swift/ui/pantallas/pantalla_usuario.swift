@@ -24,7 +24,7 @@ struct PantallaUsuario: View {
                 
                 case .espera:
                     if let usuario = gestor_usuario.usuario{
-                        Text("Usuario: \(usuario.name)")
+                        VistaUsuario(usuario: usuario)
                     }else{
                         Text("Error 404")
                     }
